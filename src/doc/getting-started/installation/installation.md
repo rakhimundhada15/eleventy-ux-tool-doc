@@ -2,7 +2,7 @@
 title: Installation
 eleventyNavigation:
   key: Installation
-  parent: GettingStarted
+  parent: Getting Started
 ---
 <div class="content">
                     <div class="content-padding">

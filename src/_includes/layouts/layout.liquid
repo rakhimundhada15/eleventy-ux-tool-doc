@@ -5,8 +5,8 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{{ title or metadata.title }}</title>
-        <link rel="stylesheet" href="{{ '/css/custom.css' | url }}">
-        <link rel="stylesheet" href="{{ '/css/foundation.css' | url }}">
+        <link rel="stylesheet" href="{{ '/assets/css/custom.css' | url }}">
+        <link rel="stylesheet" href="{{ '/assets/css/foundation.css' | url }}">
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
@@ -32,8 +32,8 @@
     </div>
     <div class="custom-top-bar">
         <ul class="dropdown menu" data-dropdown-menu>
-           {% if title %} <li class="menu-text">{{title}}</li>{% endif %}
-        </ul>
+           {% if title %} <li class="menu-text">{{eleventyNavigation.parent}} / {{title}}</li>{% endif %}
+        </ul> 
     </div>
     </header>
     <main>
@@ -42,21 +42,19 @@
             <div class="columns large-2">
                 <div class="left-nav" data-sticky>
                     <ul class="vertical menu accordion-menu" data-accordion-menu>
-                        <li> <a href="">Getting Started</a>
-                           <ul  class="menu vertical nested"> {%- for getStarted in collections.getStarted %}
-                                <li {% if page.url == getStarted.url %} class="is-active"{% endif %} ><a href="{{getStarted.url}}">{{ getStarted.data.title }}
-                                     </a>
-                                 </li>
-                                {%- endfor %}
-                             <ul>
-                        </li>
-                        <li> <a href="">setup</a>
-                           <ul  class="menu vertical nested"> {%- for post in collections.post %}
-                                <li {% if page.url == post.url %} class="is-active"{% endif %} ><a href="{{post.url}}">{{ post.data.title }}
-                                     </a>
-                                </li>
-                                {%- endfor %}
-                             <ul>
+                        <li> {%- for mainMenu in collections.mainMenu %}
+                        <a href="">{{mainMenu.data.title}}</a>
+                        <ul  class="menu vertical nested"> 
+                            {%- for indexList in collections.indexList %}
+                                {% if mainMenu.data.eleventyNavigation.key == indexList.data.eleventyNavigation.parent %} 
+                                    <li {% if page.url == indexList.url %} class="is-active"{% endif %} >
+                                        <a href="{{indexList.url}}">{{ indexList.data.title }}
+                                        </a>
+                                    </li>
+                                {% endif %}
+                            {%- endfor %}
+                        </ul>
+                        {%- endfor %}
                         </li>
                     </ul>     
                 </div>
@@ -68,9 +66,9 @@
     </div>
     </main>
 
-<script src="{{ '/js/vendor/jquery.js' | url}}"></script>
-<script src="{{ '/js/vendor/what-input.js' | url }}"></script>
-<script src="{{ '/js/vendor/foundation.js' | url }}"></script>
-<script src="{{ '/js/app.js' | url }}"></script>
+<script src="{{ '/assets/js/vendor/jquery.js' | url}}"></script>
+<script src="{{ '/assets/js/vendor/what-input.js' | url }}"></script>
+<script src="{{ '/assets/js/vendor/foundation.js' | url }}"></script>
+<script src="{{ '/assets/js/app.js' | url }}"></script>
 </body>
 </html>

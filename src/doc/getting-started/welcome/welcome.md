@@ -2,7 +2,7 @@
 title: Welcome
 eleventyNavigation:
   key: Welcome
-  parent: GettingStarted
+  parent: Getting Started
 ---
 
 <div class="content">
