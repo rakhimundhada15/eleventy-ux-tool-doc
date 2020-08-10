@@ -1,0 +1,13 @@
+{% extends "layouts/layout.liquid" %}
+{%- block leftPanelContent -%}
+                <div class="searchInput">
+                    <span><input type="search" placeholder="Search">
+                    <i class="fa fa-search"></i></span>
+                </div>
+                <ul class="vertical tabs" data-tabs id="example-tabs">  
+                    {%- for usage in usage.tabs %}
+                    <li class="tabs-title {{usage.cssClass}}"><a href="#{{usage.id}}" aria-selected="true">{{usage.title}}</a></li>
+                    {%- endfor %}
+                </ul>
+
+{%- endblock leftPanelContent -%}

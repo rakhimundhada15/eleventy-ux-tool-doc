@@ -1,0 +1,35 @@
+{
+    "tabs":[
+            {
+                "id":"health",
+                "title":"Alert Logic Health",
+                "faIcon":"plus-square",
+                "description":"Check me out! I'm a super cool Tab panel with text content!",
+                "cssClass":"is-active"
+            },
+            {
+                "id":"logParser",
+                "title":"Log Parsers",
+                "faIcon":"plus-square",
+                "description":"Check me out! I'm a super cool Tab panel with text content!"
+            },
+            {
+                "id":"vulnerability",
+                "title":"Vulnerability",
+                "faIcon":"bug",
+                "description":"Check me out! I'm a super cool Tab panel with text content!"
+            },
+            {
+                "id":"aws",
+                "title":"Aws Config",
+                "faIcon":"cloud",
+                "description":"Check me out! I'm a super cool Tab panel with text content!"
+            },
+            {
+                "id":"azure",
+                "title":"Azure Config",
+                "faIcon":"windows",
+                "description":"Check me out! I'm a super cool Tab panel with text content!"
+            }
+    ]
+}

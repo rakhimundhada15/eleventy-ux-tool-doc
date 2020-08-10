@@ -41,26 +41,27 @@
         <div class="grid-x grid-padding-x">
             <div class="columns large-2">
                 <div class="left-nav" data-sticky>
+                {% block leftPanelContent %}{% endblock leftPanelContent %}
                     <ul class="vertical menu accordion-menu" data-accordion-menu>
-                        <li> {%- for mainMenu in collections.mainMenu %}
-                        <a href="">{{mainMenu.data.title}}</a>
-                        <ul  class="menu vertical nested"> 
+                        {%- for mainMenu in collections.mainMenu %}
+                        <li>
+                            <a href="">{{mainMenu.data.title}}</a>
+                            <ul class="menu vertical nested">
                             {%- for indexList in collections.indexList %}
-                                {% if mainMenu.data.eleventyNavigation.key == indexList.data.eleventyNavigation.parent %} 
-                                    <li {% if page.url == indexList.url %} class="is-active"{% endif %} >
-                                        <a href="{{indexList.url}}">{{ indexList.data.title }}
-                                        </a>
-                                    </li>
-                                {% endif %}
+                            {%- if mainMenu.data.eleventyNavigation.key == indexList.data.eleventyNavigation.parent %} 
+                                <li {%- if page.url == indexList.url %} class="is-active"{%- endif %}>
+                                    <a href="{{indexList.url}}">{{ indexList.data.title }}</a>
+                                </li>
+                            {%- endif %}
                             {%- endfor %}
-                        </ul>
-                        {%- endfor %}
+                            </ul>
                         </li>
+                        {%- endfor %}
                     </ul>     
                 </div>
             </div>
             <div class="columns large-10">
-                {{content}}
+                {{content | safe }}
             </div>
         </div>
     </div>
