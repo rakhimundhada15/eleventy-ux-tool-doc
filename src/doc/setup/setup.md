@@ -1,6 +1,6 @@
 ---
 title: Setup
-layout : layouts/layout.liquid
+layout : layouts/layout.njk
 tags : mainMenu
 eleventyNavigation:
   key: Setup

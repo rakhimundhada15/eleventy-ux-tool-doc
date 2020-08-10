@@ -1,5 +1,5 @@
 ---
-layout : layouts/layout.liquid
+layout : layouts/layout.njk
 ---
 
 <div class="content">

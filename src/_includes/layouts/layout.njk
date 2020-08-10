@@ -45,8 +45,9 @@
                     <ul class="vertical menu accordion-menu" data-accordion-menu>
                         {%- for mainMenu in collections.mainMenu %}
                         <li>
+                         {%- set currentList = collections.indexList | getCollectionItem(page) %}
                             <a href="">{{mainMenu.data.title}}</a>
-                            <ul class="menu vertical nested">
+                            <ul  class="menu vertical nested {%- if mainMenu.data.eleventyNavigation.key == currentList.data.eleventyNavigation.parent  %}  is-active {%- endif %} " >
                             {%- for indexList in collections.indexList %}
                             {%- if mainMenu.data.eleventyNavigation.key == indexList.data.eleventyNavigation.parent %} 
                                 <li {%- if page.url == indexList.url %} class="is-active"{%- endif %}>

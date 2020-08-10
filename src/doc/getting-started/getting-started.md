@@ -1,6 +1,6 @@
 ---
 title: Getting started
-layout : layouts/layout.liquid
+layout : layouts/layout.njk
 tags : mainMenu
 eleventyNavigation:
   key: Getting Started
