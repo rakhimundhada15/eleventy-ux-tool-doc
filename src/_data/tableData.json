@@ -1,0 +1,51 @@
+{
+    "tableClass":"unstriped",
+    "tableHeader":[
+        {   "key":"id",
+           "title" :"Id",
+           "cssClass":"width='200'"
+        },
+        {
+            "key":"name",
+            "title" :"Name",
+            "cssClass":"width='100'"
+         },
+         {
+            "key":"address",
+            "title" :"Address"
+         },
+         {  "key":"detail",
+            "title" :"Details"
+         }
+    ],
+    "tableBody":[
+        {
+           "id":"1",
+           "address":"UK",
+           "detail":"This is longer content Donec id elit non mi porta gravida at eget metus",
+            "key":"1",
+            "name":"Robert Parker"
+        },
+        {
+            "id":"2",
+            "name":"Devis Matt",
+            "address":"US",
+             "detail":"This is longer content Donec id elit non mi porta gravida at eget metus",
+             "key":"2"
+         },
+         {
+            "id":"3",
+            "name":"Mohasin Nadaf",
+            "address":"India",
+             "detail":"This is longer content Donec id elit non mi porta gravida at eget metus",
+             "key":"3"
+         },
+         {
+            "id":"4",
+            "name":"Marryit ",
+            "address":"US",
+             "detail":"This is longer content Donec id elit non mi porta gravida at eget metus",
+             "key":"4"
+         }
+    ]
+}

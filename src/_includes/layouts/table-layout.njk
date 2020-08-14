@@ -1,0 +1,26 @@
+---
+layout : layouts/layout.njk
+---
+<!--set data in tableData.json and every object in tableHeader should have key and same key.value should be key of  tableBody ex.tableHeader.key ="id" then tableBody should have id to render its value -->
+
+<div class="content usage">
+ {{content | safe }}
+<table {% if tableData.tableClass %} class="{{ tableData.tableClass }}" {%- endif %}>
+  <thead>
+    <tr>
+    {%- for tableHeader in tableData.tableHeader %} 
+     <th {% if tableHeader.cssClass %} {{tableHeader.cssClass}} {%- endif%}>{{tableHeader.title}}</th>
+    {%- endfor %}
+    </tr>
+  </thead>
+  <tbody>
+   {%- for tablebody in tableData.tableBody %} 
+      <tr {%- if tablebody.key %} id={{tablebody.key}} {%- endif %}>
+      {%- for tableHeader in tableData.tableHeader%} 
+        <td >{{tablebody[tableHeader.key]}}</td>
+      {%- endfor %}
+     </tr>
+    {%- endfor %}
+  </tbody>
+</table>
+</div>

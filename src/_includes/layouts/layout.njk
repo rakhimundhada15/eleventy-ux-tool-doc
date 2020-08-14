@@ -11,10 +11,12 @@
     </head>
     <body>
     <header>
-     <div data-sticky-container>
+     <div class="sticky-top-bar">
         <div class="title-bar" data-sticky data-options="marginTop:0;" style="width:100%" data-top-anchor="1"
             data-btm-anchor="content:bottom">
-            <div class="title-bar-left">Alert logic</div>
+            <div class="title-bar-left">
+                <div class="alertlogic-log"></div>
+            </div>
             <div class="title-bar-right">
                 <ui class="dropdown menu align-right" data-dropdown-menu>
                     <li class="has-submenu">
@@ -24,23 +26,27 @@
                         </ul>
                     </li>
                     <li role="none">
-                        <a href="" role="menuitem"> Getting started</a>
+                        <a href="/doc/getting-started/welcome/" role="menuitem"> Getting started</a>
                     </li>
                 </ui>
             </div>
         </div>
+        <div class="custom-top-bar">
+            <div class="custom-bar-left">
+                <button class="menu-icon dark" type="button"></button>
+                <ul class="dropdown menu" data-dropdown-menu>
+                    {% if title %} <li class="menu-text">{{eleventyNavigation.parent}} | {{title}}</li>{% endif %}
+                </ul>
+            </div>
+        </div>
     </div>
-    <div class="custom-top-bar">
-        <ul class="dropdown menu" data-dropdown-menu>
-           {% if title %} <li class="menu-text">{{eleventyNavigation.parent}} / {{title}}</li>{% endif %}
-        </ul> 
-    </div>
+     
     </header>
     <main>
         <div class="collapse expanded row">
-        <div class="grid-x grid-padding-x">
+        <div class="grid-x grid-padding-x body-container">
             <div class="columns large-2">
-                <div class="left-nav" data-sticky>
+                <div class="left-nav">
                 {% block leftPanelContent %}{% endblock leftPanelContent %}
                     <ul class="vertical menu accordion-menu" data-accordion-menu>
                         {%- for mainMenu in collections.mainMenu %}
