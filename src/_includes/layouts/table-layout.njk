@@ -6,18 +6,19 @@ layout : layouts/layout.njk
 <div class="content usage">
  {{content | safe }}
 <table {% if tableData.tableClass %} class="{{ tableData.tableClass }}" {%- endif %}>
+{%- set header = tableData.tableBody[0] | getkeys()  %}
   <thead>
-    <tr>
-    {%- for tableHeader in tableData.tableHeader %} 
-     <th {% if tableHeader.cssClass %} {{tableHeader.cssClass}} {%- endif%}>{{tableHeader.title}}</th>
+     <tr>
+    {%- for header in header %} 
+     <th>{{header}}</th>
     {%- endfor %}
     </tr>
   </thead>
   <tbody>
    {%- for tablebody in tableData.tableBody %} 
-      <tr {%- if tablebody.key %} id={{tablebody.key}} {%- endif %}>
-      {%- for tableHeader in tableData.tableHeader%} 
-        <td >{{tablebody[tableHeader.key]}}</td>
+      <tr {%- if tablebody.id %} id={{tablebody.id}} {%- endif %}>
+      {%- for header in header%} 
+        <td >{{tablebody[header]}}</td>
       {%- endfor %}
      </tr>
     {%- endfor %}

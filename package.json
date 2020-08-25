@@ -8,7 +8,9 @@
     "watch": "eleventy --watch",
     "serve": "eleventy --serve",
     "start": "eleventy --serve",
-    "debug": "DEBUG=* eleventy"
+    "debug": "DEBUG=* eleventy",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d dist"
   },
   "author": {
     "name": "Rakhi Mundhada",
@@ -18,7 +20,9 @@
   "devDependencies": {
     "@11ty/eleventy-navigation": "^0.1.6"
   },
+  "homepage": "https://rakhimundhada15.github.io/eleventy-ux-tool-doc/",
   "dependencies": {
-    "@11ty/eleventy": "^0.11.0"
+    "@11ty/eleventy": "^0.11.0",
+    "gh-pages": "^3.1.0"
   }
 }
