@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Global Styles</title>
+        <link rel="stylesheet" href="/assets/css/custom.css">
+        <link rel="stylesheet" href="/assets/css/foundation.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+    <header>
+     <div class="sticky-top-bar">
+        <div class="title-bar" data-sticky data-options="marginTop:0;" style="width:100%" data-top-anchor="1"
+            data-btm-anchor="content:bottom">
+            <div class="title-bar-left">
+                <div class="alertlogic-log"></div>
+            </div>
+            <div class="title-bar-right">
+                <ui class="dropdown menu align-right" data-dropdown-menu>
+                    <li class="has-submenu">
+                        <a href="#0"> Rakhi Mundhada</a>
+                        <ul class="submenu menu vertical" data-submenu>
+                            <li><a href="#0">Logout</a></li>
+                        </ul>
+                    </li>
+                    <li role="none">
+                        <a href="/doc/getting-started/welcome/" role="menuitem"> Getting started</a>
+                    </li>
+                </ui>
+            </div>
+        </div>
+        <div class="custom-top-bar">
+            <div class="custom-bar-left">
+                <button class="menu-icon dark" type="button"></button>
+                <ul class="dropdown menu" data-dropdown-menu>
+                     <li class="menu-text">Setup | Global Styles</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+     
+    </header>
+    <main>
+        <div class="collapse expanded row">
+        <div class="grid-x grid-padding-x body-container">
+            <div class="columns large-2">
+                <div class="left-nav">
+                
+                    <ul class="vertical menu accordion-menu" data-accordion-menu>
+                        <li>
+                            <a href="">Getting started</a>
+                            <ul  class="menu vertical nested " > 
+                                <li>
+                                    <a href="/doc/getting-started/welcome/">Welcome</a>
+                                </li> 
+                                <li>
+                                    <a href="/doc/getting-started/installation/">Installation</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">Setup</a>
+                            <ul  class="menu vertical nested  is-active " > 
+                                <li>
+                                    <a href="/doc/setup/flex/">Flex</a>
+                                </li> 
+                                <li class="is-active">
+                                    <a href="/doc/setup/global-styles/">Global Styles</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">Usage</a>
+                            <ul  class="menu vertical nested " > 
+                                <li>
+                                    <a href="/doc/usage/table/">Table</a>
+                                </li> 
+                                <li>
+                                    <a href="/doc/usage/usage-sample/">Usage Sample</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>     
+                </div>
+            </div>
+            <div class="columns large-10">
+                <div class="content">
+                    <div class="content-padding">
+                        <div class="grid-x grid-padding-x">
+                            <div   class="columns large-9" id="instalationDoc">
+                                <div id="globalStyle">
+                                    <h2 >Global Styles</h2>
+                                    <p>
+                                        Our global CSS includes helpful resets to ensure consistent styling across browsers.
+                                    </p>
+                                    <div>
+                                        <iframe width="800" height="315" src="https://www.youtube.com/embed/nEgHk2wmMjU?showinfo=0&enablejsapi=1&origin=https%3A%2F%2Fget.foundation&widgetid=1">
+                                        </iframe>
+                                    </div>
+                                </div>
+                                <div id="fontSizing">
+                                    <h2 >Font Sizing</h2>
+                                    <p>
+                                        The default font size is set to 100% of the browser style sheet, usually 16 pixels. This ensures compatibility with browser-based text zoom or user-set defaults. If you're using the Sass version of Foundation, edit the <code>$global-font-size</code> variable to change the base font size. This can be a percentage value, or a pixel value..
+                                    </p>
+                                </div>
+                                <hr>
+                                <div id="color">
+                                    <h1>Colors</h1>
+                                    <p>Foundation has an accessible default color palette. The primary color is used for interactive elements, such as links and buttons. The secondary, success, warning, and alert colors are used to give more context to UI elements and actions.</p>
+                                </div>   
+                            </div>
+                            <div class="columns large-3">
+                                <nav class="sticky-container" data-sticky-container>
+                                    <div class="sticky is-stuck" data-options="marginTop:6;" data-anchor="instalationDoc">
+                                        <ul class="vertical menu" data-smooth-scroll>
+                                            <li>
+                                                <a href="#globalStyle">Global Style</a>
+                                            </li>
+                                            <li>
+                                                <a href="#color">Colors</a>
+                                            </li>
+                                            <li>
+                                                <a href="#fontSizing">Font Sizing</a>
+                                            </li>     
+                                        </ul>     
+                                    </div> 
+                                </nav>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+
+<script src="/assets/js/vendor/jquery.js"></script>
+<script src="/assets/js/vendor/what-input.js"></script>
+<script src="/assets/js/vendor/foundation.js"></script>
+<script src="/assets/js/app.js"></script>
+</body>
+</html>
