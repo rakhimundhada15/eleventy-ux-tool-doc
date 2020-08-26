@@ -26,7 +26,7 @@ layout : layouts/layout.njk
                                     There are a number of ways to install Foundation for Sites. Our installation page will help you find the best option for you.
                                 </p>
                                 <p>
-                                    <a href="installation.html" class="large button"> Install Foundation for Sites</a>
+                                    <a href="/eleventy-ux-tool-doc/doc/getting-started/installation/" class="large button"> Install Foundation for Sites</a>
                                 </p>
                                 <hr>
                                 <h2>  New to Foundation for Sites?</h2>

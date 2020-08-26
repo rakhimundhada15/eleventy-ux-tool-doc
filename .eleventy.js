@@ -20,6 +20,7 @@ module.exports = function(eleventyConfig) {
       },
       templateFormats : ["html","md","css","png","liquid"],
       htmlTemplateEngine : "liquid",
-      markdownTemplateEngine :  "liquid"
+      markdownTemplateEngine :  "liquid",
+      pathPrefix: "/eleventy-ux-tool-doc/"
   }
 };
